@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   build-dev:
-    uses: Zerafush/CICD/.github/workflows/deploy-to-s3.yml@Staging
+    uses: Proyecto-DevOps-Gonzalo-Gaston/DevOps/.github/workflows/deploy-to-s3.yml@Staging
     with:
       CI_ENV: Staging
       CONTENTFUL_ENVIRONMENT: 'Staging'

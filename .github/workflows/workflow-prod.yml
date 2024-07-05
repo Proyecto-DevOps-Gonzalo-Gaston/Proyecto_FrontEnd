@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   build-dev:
-    uses: Zerafush/CICD/.github/workflows/deploy-to-s3.yml@main
+    uses: Proyecto-DevOps-Gonzalo-Gaston/DevOps/.github/workflows/deploy-to-s3.yml@main
     with:
       CI_ENV: production
       CONTENTFUL_ENVIRONMENT: 'main'
@@ -25,3 +25,4 @@ jobs:
       AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN}}
       AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
       S3_ORIGIN_BUCKET: ${{ secrets.S3_ORIGIN_BUCKET_PRD }}
+      
