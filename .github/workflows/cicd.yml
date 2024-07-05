@@ -25,13 +25,18 @@ jobs:
       run: npm install
 
     - name: Run build
-      run: npm run build
+      run: nx build
+
+    - name: Verify build directory
+      run: |
+        echo "Verifying build directory contents:"
+        ls -la dist/apps/your-app-name
 
     - name: Upload build artifact
       uses: actions/upload-artifact@v2
       with:
         name: build
-        path: build/
+        path: dist/apps/your-app-name/
 
   test:
     runs-on: ubuntu-latest
@@ -53,10 +58,13 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: build
-        path: build/
+        path: dist/apps/your-app-name/
+
+    - name: Verify downloaded build directory
+      run: ls -la dist/apps/your-app-name
 
     - name: Run tests
-      run: npm test
+      run: nx test
 
   deploy:
     runs-on: ubuntu-latest
@@ -71,7 +79,10 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: build
-        path: build/
+        path: dist/apps/your-app-name/
+
+    - name: Verify downloaded build directory
+      run: ls -la dist/apps/your-app-name
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
@@ -82,7 +93,7 @@ jobs:
 
     - name: Deploy to S3
       run: |
-        aws s3 sync build/ s3://${{ secrets.S3_BUCKET_NAME }} --delete
+        aws s3 sync dist/apps/your-app-name/ s3://${{ secrets.S3_BUCKET_NAME }} --delete
 
     - name: Invalidate CloudFront cache
       run: |
