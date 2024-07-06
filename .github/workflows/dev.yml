@@ -44,10 +44,14 @@ jobs:
         with:
           name: build-artifacts
           path: dist/apps/catalog
+          
+     - name: Verify downloaded artifacts
+        run: |
+          ls -l dist/apps/catalog
 
       - name: Run tests
         run: npm test
-        working-directory: /home/runner/work/Proyecto_FrontEnd/Proyecto_FrontEnd/dist/apps/catalog
+        working-directory: dist/apps/catalog
 
   deploy:
     runs-on: ubuntu-latest
