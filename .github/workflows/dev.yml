@@ -45,8 +45,8 @@ jobs:
           name: build-artifacts
           path: dist/apps/catalog
 
-        - name: Run tests
-          run: npm test
+      - name: Run tests
+        run: npm test
 
   deploy:
     runs-on: ubuntu-latest
