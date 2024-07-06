@@ -39,8 +39,14 @@ jobs:
     needs: build
 
     steps:
-      - name: Run tests
-        run: npm test
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifacts
+          path: dist/apps/catalog
+
+        - name: Run tests
+          run: npm test
 
   deploy:
     runs-on: ubuntu-latest
