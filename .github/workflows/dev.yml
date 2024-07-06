@@ -34,7 +34,7 @@ jobs:
           name: build-artifacts
           path: dist/apps/catalog
 
-   test:
+  test:
     runs-on: ubuntu-latest
     needs: build
 
