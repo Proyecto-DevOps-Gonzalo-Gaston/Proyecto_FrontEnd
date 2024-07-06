@@ -70,11 +70,11 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
-          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+          aws-region: us-east-1
 
       - name: Create S3 Bucket
         run: |
-          aws s3api create-bucket --bucket ${{ secrets.S3_ORIGIN_BUCKET_DEV }} --region ${{ secrets.AWS_DEFAULT_REGION }} --create-bucket-configuration LocationConstraint=${{ secrets.AWS_DEFAULT_REGION }}
+          aws s3api create-bucket --bucket ${{ secrets.S3_ORIGIN_BUCKET_DEV }} --region us-east-1 --create-bucket-configuration LocationConstraint=us-east-1
 
       - name: Configure Static Website Hosting
         run: |
