@@ -3,7 +3,7 @@ name: Build, Test, and Deploy
 on:
   push:
     branches:
-      - Develop
+      - Staging
 
 jobs:
   build:
@@ -74,7 +74,7 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync build/ s3://${{ secrets.S3_ORIGIN_BUCKET_DEV }} --delete
+          aws s3 sync build/ s3://${{ secrets.S3_ORIGIN_BUCKET_STG }} --delete
 
       - name: Invalidate CloudFront cache
         run: |
