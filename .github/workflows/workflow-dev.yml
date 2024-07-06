@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   build-dev:
-    uses: Zerafush/Proyecto-DevOps-Gonzalo-Gaston/DevOps/.github/workflows/deploy-to-s3.yml@main
+    uses: Zerafush/DevOps/.github/workflows/deploy-to-s3.yml@main
     with:
       CI_ENV: Develop
       CONTENTFUL_ENVIRONMENT: 'Develop'
