@@ -47,7 +47,7 @@ jobs:
 
       - name: Run tests
         run: npm test
-        working-directory: ./Proyecto_FrontEnd
+        working-directory: ../
         
   deploy:
     runs-on: ubuntu-latest
