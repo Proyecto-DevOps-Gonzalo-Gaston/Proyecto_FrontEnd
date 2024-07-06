@@ -51,7 +51,7 @@ jobs:
 
       - name: Run tests
         run: npm test
-        working-directory: dist/apps/catalog
+        working-directory: /home/runner/work/Proyecto_FrontEnd/
 
   deploy:
     runs-on: ubuntu-latest
