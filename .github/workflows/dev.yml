@@ -26,13 +26,13 @@ jobs:
 
       - name: Verify build directory contents
         run: |
-          ls -l ../../build
+          ls -l dist/apps/catalog
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: build-artifacts
-          path: ../../build  
+          path: dist/apps/catalog
 
   test:
     runs-on: ubuntu-latest
