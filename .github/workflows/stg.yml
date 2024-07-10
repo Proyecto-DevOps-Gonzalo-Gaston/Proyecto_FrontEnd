@@ -88,7 +88,8 @@ jobs:
       uses: hashicorp/setup-terraform@v1
 
     - name: verificar Descarga
-      uses: ls -l terraform/
+      run: |
+        ls -l dist/apps/catalog
 
     - name: Terraform Init
       run: |
