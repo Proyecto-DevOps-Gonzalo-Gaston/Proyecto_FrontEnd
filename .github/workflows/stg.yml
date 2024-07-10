@@ -76,7 +76,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: [test, Terraform AWS Deployment]
+    needs: [test, terraform-deploy]
 
     steps:
       - name: Download build artifacts

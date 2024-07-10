@@ -7,7 +7,7 @@ on:
       - Staging
 
 jobs:
-  deploy:
+  terraform-deploy:
     runs-on: ubuntu-latest
 
     env:
