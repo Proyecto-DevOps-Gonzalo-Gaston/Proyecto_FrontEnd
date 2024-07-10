@@ -82,29 +82,32 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Clone Terraform Repository
-      run: git clone --branch main https://github.com/Proyecto-DevOps-Gonzalo-Gaston/DevOps Terraform/TerraformFE
+      run: git clone --branch main https://github.com/Proyecto-DevOps-Gonzalo-Gaston/DevOps terraform
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
 
+    - name: verificar Descarga
+      uses: ls -la
+
     - name: Terraform Init
       run: |
-        cd Terraform/TerraformFE
+        cd terraform/Terraform/TerraformFE
         terraform init
 
     - name: Terraform Plan
       run: |
-        cd Terraform/TerraformFE
+        cd terraform/Terraform/TerraformFE
         terraform plan
 
     - name: Terraform Apply
       run: |
-        cd Terraform/TerraformFE
+        cd terraform/Terraform/TerraformFE
         terraform apply -auto-approve
 
     - name: Terraform Apply 2
       run: |
-        cd Terraform/TerraformFE
+        cd terraform/Terraform/TerraformFE
         terraform apply -auto-approve
 
   deploy:
