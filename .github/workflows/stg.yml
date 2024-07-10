@@ -89,7 +89,7 @@ jobs:
 
     - name: verificar Descarga
       run: |
-        ls -l dist/apps/catalog
+        ls -l terraform
 
     - name: Terraform Init
       run: |
