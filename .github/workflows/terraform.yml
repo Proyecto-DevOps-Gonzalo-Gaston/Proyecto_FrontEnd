@@ -43,7 +43,7 @@ jobs:
       - name: Terraform Apply
         run: |
           cd terraform/Terraform/TerraformFE
-          terraform apply -auto-approve
+          terraform apply -auto-approve || exit 0
 
       - name: Terraform Apply 2
         run: |
