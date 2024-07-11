@@ -8,6 +8,7 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
+
   terraform-deploy:
     runs-on: ubuntu-lateste
 
