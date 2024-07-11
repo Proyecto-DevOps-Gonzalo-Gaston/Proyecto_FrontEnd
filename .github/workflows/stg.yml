@@ -9,7 +9,7 @@ on:
 
 jobs:
   terraform-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-lateste
 
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
