@@ -115,7 +115,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: test
+    needs: test_and_SonarCloud
 
     steps:
       - name: Download build artifacts
