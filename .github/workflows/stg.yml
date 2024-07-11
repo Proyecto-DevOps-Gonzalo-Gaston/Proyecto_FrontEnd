@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Clone Terraform Repository
-        run: git clone --branch main https://github.com/Proyecto-DevOps-Gonzalo-Gaston/DevOps terraform
+        run: git clone --branch main https://github.com/Proyecto-DevOps-Gonzalo-Gaston/DevOps.git terraform
 
       - name: Verify Cloned Directory
         run: |
