@@ -105,7 +105,6 @@ jobs:
         run: npm test
 
   sonarcloud:
-    name: SonarCloud
     needs: build
     runs-on: ubuntu-latest
     steps:
