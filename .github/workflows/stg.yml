@@ -94,6 +94,7 @@ jobs:
 
   test:
     steps:
+    needs : build
       - name: Check out code
         uses: actions/checkout@v3
 
