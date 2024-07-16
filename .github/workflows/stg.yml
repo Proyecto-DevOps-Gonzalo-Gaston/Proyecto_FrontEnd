@@ -154,7 +154,7 @@ jobs:
         run: npx wait-on http://stg-fe-gg.s3-website-us-east-1.amazonaws.com 
       
       - name: Run ls to list directory contents
-        run: ls -la
+        run: cat cypress/integration/cypress.json
 
       - name: Run Cypress tests
         run: npx cypress run --config-file cypress/integration/cypress.json
