@@ -1,5 +1,5 @@
 {
-    "baseUrl": "https://<tu-bucket-s3-url>",
+    "baseUrl": "http://stg-fe-gg.s3-website-us-east-1.amazonaws.com",
     "video": false,
     "screenshotsFolder": "cypress/screenshots",
     "videosFolder": "cypress/videos",
