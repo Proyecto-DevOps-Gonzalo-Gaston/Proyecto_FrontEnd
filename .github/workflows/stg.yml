@@ -163,8 +163,7 @@ jobs:
         run: npx wait-on http://stg-fe-gg.s3-website-us-east-1.amazonaws.com 
       
       - name: Print Working Directory
-        run: |
-          pwd
+        run: ls -la
 
       - name: Run Cypress tests
         run: npx cypress run
