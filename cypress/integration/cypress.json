@@ -1,0 +1,7 @@
+{
+    "baseUrl": "https://<tu-bucket-s3-url>",
+    "video": false,
+    "screenshotsFolder": "cypress/screenshots",
+    "videosFolder": "cypress/videos",
+    "integrationFolder": "cypress/integration"
+  }
