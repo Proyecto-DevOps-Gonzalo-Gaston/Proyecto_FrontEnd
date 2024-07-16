@@ -154,7 +154,7 @@ jobs:
         run: npx wait-on http://stg-fe-gg.s3-website-us-east-1.amazonaws.com 
 
       - name: Run Cypress tests
-        run: npx cypress run
+        run: npx cypress run --config-file cypress/integration/cypress.json
 
       - name: Upload Cypress results
         uses: actions/upload-artifact@v3
