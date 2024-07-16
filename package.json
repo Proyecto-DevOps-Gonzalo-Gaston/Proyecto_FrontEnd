@@ -5,14 +5,10 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "cy:run:ci": "cypress run --reporter junit --reporter-options 'mochaFile=results/my-test-output.xml'"
+    "test": "nx test"
   },
   "private": true,
   "dependencies": {
-    "cypress": "^10.0.0",
     "core-js": "^3.6.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
