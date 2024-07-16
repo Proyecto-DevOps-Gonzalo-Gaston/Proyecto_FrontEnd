@@ -93,8 +93,8 @@ jobs:
 
 
   test:
-    steps:
     needs : build
+    steps:
       - name: Check out code
         uses: actions/checkout@v3
 
